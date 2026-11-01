@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar matching cinematic orange theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #190E09;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #B9470B;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF650A;
+  }
+}
+
+.font-heading-display {
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.font-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+/* Subtle glow effects */
+.orange-glow-sm {
+  box-shadow: 0 0 15px rgba(255, 101, 10, 0.25);
+}
+
+.orange-glow-lg {
+  box-shadow: 0 0 35px rgba(255, 101, 10, 0.35);
+}
+
+/* Shimmer animation for coming soon and highlight elements */
+@keyframes warm-pulse {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.animate-warm-pulse {
+  animation: warm-pulse 3s ease-in-out infinite;
+}
